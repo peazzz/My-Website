@@ -1,4 +1,4 @@
-/* --- 個人頭像與首頁 --- */
+/* 個人頭像與首頁 */
 .profile-pic {
     width: 250px;
     height: 250px;
@@ -12,7 +12,28 @@
     padding: 100px 0;
 }
 
-/* --- 作品集卡片 --- */
+/* 標籤 */
+.badge-container {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;     /* 讓裡面的標籤橫向排列 */
+    gap: 5px;          /* 標籤之間的間距 */
+    pointer-events: none;
+}
+
+/* 個別標籤的樣式 */
+.badge-item {
+    background-color: #6c757d; /* 灰色背景 */
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase; /* 自動轉大寫，看起來更專業 */
+}
+
+/* 作品集卡片 */
 .card {
     position: relative;
     cursor: pointer;
@@ -79,7 +100,7 @@
 .modal-body p,
 .modal-body li,
 .modal-body ul {
-    max-width: 97%;
+    padding: 0 10px;
     margin-left: auto;   /* 居中對齊 */
     margin-right: auto;  /* 居中對齊 */
     text-align: justify; /* 保持你之前要的左右對齊[cite: 2] */
