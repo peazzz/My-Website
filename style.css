@@ -14,9 +14,47 @@
 
 /* --- 作品集卡片 --- */
 .card {
-    height: fit-content !important;
-    align-self: flex-start;
-    transition: transform 0.3s ease; /* 增加輕微的卡片浮動感 */
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* 確保遮罩不會超出圓角 */
+    transition: transform 0.3s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61, 137, 252, 0.6); /* Bootstrap 藍色的半透明版 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 預設隱藏 */
+    transition: opacity 0.3s ease;
+    z-index: 1; /* 確保在圖片和文字上方 */
+}
+
+/* 建立中央的 + 符號 */
+.card::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+    opacity: 0; /* 預設隱藏 */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* 確保在藍色背景上方 */
+}
+
+/* 當滑鼠懸停 (hover) 時，顯示背景與符號 */
+.card:hover::before,
+.card:hover::after {
+    opacity: 1;
 }
 
 .card:hover {
@@ -34,16 +72,22 @@
     line-height: 1.6;
 }
 
+.modal-body h4{
+    font-weight: bold;
+}
+
+.modal-body p,
+.modal-body li,
+.modal-body ul {
+    max-width: 97%;
+    margin-left: auto;   /* 居中對齊 */
+    margin-right: auto;  /* 居中對齊 */
+    text-align: justify; /* 保持你之前要的左右對齊[cite: 2] */
+}
+
 /* --- 自動展開描述區 (核心邏輯) --- */
 .description-wrapper {
     position: relative;
-    overflow: hidden;
-    max-height: 3.2em; /* 預設顯示兩行 (1.6em * 2)[cite: 2] */
-    transition: max-height 0.6s ease-in-out;
-}
-
-.card:hover .description-wrapper {
-    max-height: 1000px; /* 展開後的高度限制[cite: 2] */
 }
 
 /* 提示文字漸層遮罩 */
@@ -55,7 +99,7 @@
     width: 100%;
     height: 1.6em;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
     color: #0d6efd;
@@ -64,18 +108,14 @@
     transition: opacity 0.3s ease;
 }
 
-.card:hover .description-wrapper::after {
-    opacity: 0; /* 展開時隱藏提示字[cite: 2] */
-}
-
 /* --- 專案技術清單 --- */
-.project-features {
+.project-content {
     list-style: none; padding-left: 0; margin-top: 10px;
 }
-.project-features li {
+.project-content li {
     position: relative; padding-left: 1.2rem;
-    font-size: 0.85rem; line-height: 1.4; margin-bottom: 5px;
+    line-height: 1.4; margin-bottom: 5px;
 }
-.project-features li::before {
+.project-content li::before {
     content: "•"; position: absolute; left: 0; color: #0d6efd; font-weight: bold;
 }
