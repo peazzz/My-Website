@@ -8,8 +8,18 @@
 }
 
 .hero-section { 
-    background: #f8f9fa; 
-    padding: 100px 0;
+    /* 讓背景圖片覆蓋整個區域並置中 */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Chihuahua_Back2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 設定內距，確保文字不會貼齊邊緣，也可以增加高度 */
+    padding-top: 60px;
+    padding-bottom: 40px;
+    
+    /* 如果背景太暗或太亮，可以設定文字顏色 */
+    color: white;
 }
 
 /* 標籤 */
