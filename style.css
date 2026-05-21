@@ -9,7 +9,7 @@
 
 .hero-section { 
     /* 讓背景圖片覆蓋整個區域並置中 */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/webp/Chihuahua_Back3.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/webp/Back_Chihuahua.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
