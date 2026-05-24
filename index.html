@@ -22,8 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">專案作品</a></li>
                 </ul>
             </div>
         </div>
@@ -37,11 +36,13 @@
             <p class="lead">Chun-Chen,Yang</p>
             <p class="mb-1">・國立臺中科技大學多媒體設計系 碩士</p>
             <p>・國立臺中科技大學多媒體設計系 學士</p>
-            <p>信箱：abc1211456@gmail.com</p>
+            <p class="mb-0">Email：abc1211456@gmail.com</p>
+            <p class="mb-0">Github：<a href="https://github.com/peazzz" rel="noopener noreferrer" target="_blank" style="text-decoration: none; color: inherit;">https://github.com/peazzz</a></p>
             <div class="mt-4">
                 <span class="badge bg-primary">Unity</span>
-                <span class="badge bg-secondary">C#</span>
-                <span class="badge bg-info text-dark">JLPT N3</span>
+                <span class="badge bg-secondary">AR</span>
+                <span class="badge bg-secondary">MR</span>
+                <span class="badge bg-secondary">PC</span>
             </div>
         </div>
     </header>
@@ -59,10 +60,32 @@
                 <li class="nav-item"><button class="nav-link filter-btn" data-filter="filter-3d">3D</button></li>
                 <li class="nav-item"><button class="nav-link filter-btn" data-filter="filter-video">Video</button></li>
             </ul>
-            <div class="row g-4" id="portfolio-container">
-                <!-- 作品 1:MR互動繪本 -->
-                <div class="col-md-4 portfolio-item filter-mr">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal1">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 g-4" id="portfolio-container">
+                <!-- 作品 1:影片作品集 -->
+                <div class="col portfolio-item filter-video">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project1">
+                        <img src="img/webp/Video_Portfolio.webp" class="card-img-top" alt="影片作品集">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">影片作品集</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">作品集</h6>
+                            <!-- 擔任 -->
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted">擔任：剪輯</small>
+                                </div>
+                            </div>
+                            <div class="badge-container">
+                                <span class="badge-item">Video</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 2:MR互動繪本 -->
+                <div class="col portfolio-item filter-mr">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project2">
                         <img src="img/webp/MR_Book.webp" class="card-img-top" alt="MR互動繪本">
                         <div class="card-body">
                             <h5 class="card-title">MR互動繪本</h5>
@@ -79,9 +102,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 2:AR工具 -->
-                <div class="col-md-4 portfolio-item filter-ar">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                <!-- 作品 3:AR工具 -->
+                <div class="col portfolio-item filter-ar">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project3">
                         <img src="img/webp/AR_Tool.webp" class="card-img-top" alt="AR雕刻工具">
                         <div class="card-body">
                             <h5 class="card-title">AR雕刻工具</h5>
@@ -98,9 +122,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 3:AR衛教 -->
-                <div class="col-md-4 portfolio-item filter-ar">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                <!-- 作品 4:AR衛教 -->
+                <div class="col portfolio-item filter-ar">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project4">
                         <img src="img/webp/AR_HE.webp" class="card-img-top" alt="AR衛教">
                         <div class="card-body">
                             <h5 class="card-title">AR衛生教育</h5>
@@ -117,9 +142,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 4:AR創作平台 -->
-                <div class="col-md-4 portfolio-item filter-ar">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                <!-- 作品 5:AR創作平台 -->
+                <div class="col portfolio-item filter-ar">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project5">
                         <img src="img/webp/AR_Platform.webp" class="card-img-top" alt="AR創作平台">
                         <div class="card-body">
                             <h5 class="card-title">AR創作平台</h5>
@@ -136,9 +162,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 5:GameJam2 -->
-                <div class="col-md-4 portfolio-item filter-pc">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                <!-- 作品 6:GameJam2 -->
+                <div class="col portfolio-item filter-pc">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project6">
                         <img src="img/webp/PC_GameJam2.webp" class="card-img-top" alt="GameJam2">
                         <div class="card-body">
                             <h5 class="card-title">You Shall Not Pass</h5>
@@ -155,9 +182,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 6:GameJam1 -->
-                <div class="col-md-4 portfolio-item filter-pc">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                <!-- 作品 7:GameJam1 -->
+                <div class="col portfolio-item filter-pc">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project7">
                         <img src="img/webp/PC_GameJam1.webp" class="card-img-top" alt="GameJam1">
                         <div class="card-body">
                             <h5 class="card-title">Leave Me Alone</h5>
@@ -174,9 +202,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 7:蝴蝶遊戲 -->
-                <div class="col-md-4 portfolio-item filter-pc">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal7">
+                <!-- 作品 8:蝴蝶遊戲 -->
+                <div class="col portfolio-item filter-pc">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project8">
                         <img src="img/webp/PC_Butterfly.webp" class="card-img-top" alt="蝴蝶遊戲">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">毛毛與BUBU</h5>
@@ -193,9 +222,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 8:爬塔塔 -->
-                <div class="col-md-4 portfolio-item filter-pc">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal8">
+                <!-- 作品 9:爬塔塔 -->
+                <div class="col portfolio-item filter-pc">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project9">
                         <img src="img/webp/PC_Patata.webp" class="card-img-top" alt="爬塔塔">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">爬塔塔</h5>
@@ -213,9 +243,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 9:2D紙娃娃 -->
-                <div class="col-md-4 portfolio-item filter-2d">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal9">
+                <!-- 作品 10:2D紙娃娃 -->
+                <div class="col portfolio-item filter-2d">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project10">
                         <img src="img/webp/2D_Dog.webp" class="card-img-top" alt="2D紙娃娃">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">可愛小狗吉娃娃</h5>
@@ -233,9 +264,10 @@
                     </div>
                 </div>
 
-                <!-- 作品 10:3D建模 -->
-                <div class="col-md-4 portfolio-item filter-3d">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal10">
+                <!-- 作品 11:3D建模 -->
+                <div class="col portfolio-item filter-3d">
+                    <div class="card h-100 portfolio-card-click" data-bs-toggle="modal"
+                        data-bs-target="#universalProjectModal" data-project-id="project11">
                         <img src="img/webp/3D_GasStation.webp" class="card-img-top" alt="3D建模">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">加油站</h5>
@@ -253,838 +285,153 @@
                     </div>
                 </div>
 
-                <!-- 作品 11:影片作品集 -->
-                <div class="col-md-4 portfolio-item filter-video">
-                    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#projectModal11">
-                        <img src="img/webp/Video_Portfolio.webp" class="card-img-top" alt="影片作品集">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title fw-bold">影片作品集</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">作品集</h6>
-                            <!-- 擔任 -->
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <small class="text-muted">擔任：剪輯</small>
-                                </div>
-                            </div>
-                            <div class="badge-container">
-                                <span class="badge-item">Video</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
 
     <!-- 頁尾 -->
     <footer class="bg-dark text-white text-center py-4">
+        <p><a href="https://github.com/peazzz/My-Website" rel="noopener noreferrer" target="_blank" style="text-decoration: none; color: inherit;">https://github.com/peazzz/My-Website</a></p>
         <p>&copy; 2026 楊竣丞. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- My Bootstrap JS Bundle -->
+    <script src="data.js"></script>
     <script src="main.js"></script>
 
-    <!-- Modal 1 -->
-    <div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="universalProjectModal" tabindex="-1" aria-labelledby="universalProjectModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content text-dark">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold">MR互動繪本 (2024/03~2025/04, 2025/09~2026/02)</h5>
+                    <h5 class="modal-title fw-bold" id="dynamicModalTitle"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-header-line"></div>
                 <div class="modal-body">
-                    <div id="projectCarousel1" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
-                            <button type="button" data-bs-target="#projectCarousel1" data-bs-slide-to="5"
-                                aria-label="Slide 6"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/MR_Book_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/MR_Book_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/MR_Book_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/MR_Book_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/MR_Book_5.webp" class="img-fluid rounded mb-3" alt="圖5">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/MR_Book_6.webp" class="img-fluid rounded mb-3" alt="圖6">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel1"
+                    <div id="dynamicCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators" id="dynamicCarouselIndicators"></div>
+
+                        <div class="carousel-inner" id="dynamicCarouselInner"></div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#dynamicCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel1"
+                        <button class="carousel-control-next" type="button" data-bs-target="#dynamicCarousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <div class="mb-1">
-                        <a href="https://youtu.be/1KlCKZ9EN9c?si=QF-buhqdJ97vGLPU" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>故事背景</h4>
-                        <h5>《阿婆的時光寶盒》</h5>
-                        <p>透過阿婆與恩恩搭乘時光機回到過去，一一找回時光寶盒中珍藏的記憶精靈的旅程故事。認識客家祭儀的重要文化特色，並呈現客家宗族在推動性別平權上所做的努力與祭儀文化的演變歷程。</p>
-                        <h5>《Guji Guji》</h5>
-                        <p>一隻名叫Guji Guji的鱷魚因鴨媽媽的照顧下一直以為自己是隻鴨子，直到碰上三隻不懷好意的鱷魚，在經歷自我懷疑後，最終選擇擁抱自己的獨特性，成為一隻「鱷魚鴨」。</p>
-                        <h5>《小威的眼睛》</h5>
-                        <p>一位名叫小威的男孩，他雖然看不見，但卻以獨特的方式感知世界。故事展現了視障孩子的生活情境，讓孩子們理解視障朋友的日常，並學會尊重和平等對待他們。</p>
-                        <hr>
-                        <h4>遊戲玩法</h4>
-                        <p>主畫面提供「單一關卡」或「全篇繪本」兩種演出方式。操作方法主要利用手勢以及VR頭盔進行互動，少數關卡由VR手把操作。同時畫面結合虛擬手語老師，為手語使用者提供即時的說明與引導。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>算是我花最久時間在處理的專案，該專案主要分兩次進行開發，第一次是我還在碩一的時候，當時開發項目為《阿婆的時光寶盒》和《Guji
-                            Guji》，第二次是我剛碩士畢業，開發項目為《小威的眼睛》。<br>
-                            不巧，剛碩士畢業的我很快就當兵了，導致開發的時間極度壓縮，每次放假幾乎沒有休息的時間，都在處理該專案，幸好有學弟願意幫忙開發，否則在結案前無法完成。
-                            這兩次專案即使結案後，依然會根據遊玩體驗持續修正內容與Bug，為呈現最好的作品。
-                        </p>
-                        <hr>
-                        <h4>遊戲特色</h4>
-                        <li>Socket.IO實作即時通訊架構</li>
-                        <li>使用Addressables進行資源更新與Scene載入</li>
-                        <li>AI Navigation固定軌跡移動</li>
-                        <li>Shader使用與修改</li>
-                        <hr>
-                        <h4>第三方套件</h4>
-                        <li>Meta XR All-in-One SDK</li>
-                        <li>socket.io-client-csharp(by doghappy)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 2 -->
-    <div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">AR雕刻工具 (2025/06~2025/07)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel2" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel2" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel2" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel2" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel2" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#projectCarousel2" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/AR_Tool_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Tool_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Tool_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Tool_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Tool_5.webp" class="img-fluid rounded mb-3" alt="圖5">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel2"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel2"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    <div id="dynamicModalLinksSection" class="mb-2 ps-2">
+                        <a id="dynamicModalYoutubeBtn" href="" target="_blank"
+                            class="btn btn-outline-danger me-2">Youtube連結</a>
+                        <a id="dynamicModalGithubBtn" href="" target="_blank"
+                            class="btn btn-outline-dark me-2">GitHub連結</a>
+                        <a id="dynamicModalBahamuteBtn" href="" target="_blank"
+                            class="btn btn-outline-info me-2">巴哈姆特報導</a>
+                        <a id="dynamicModalPaperBtn" href="" target="_blank"
+                            class="btn btn-outline-primary me-2">論文連結</a>
                     </div>
-                    <div class="mb-1">
-                        <a href="https://github.com/peazzz/ARTool_test" target="_blank"
-                            class="btn btn-outline-dark">GitHub連結</a>
-                        <a href="https://youtu.be/ktRKj_eE0fA" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                        <a href="https://hdl.handle.net/11296/d687re" target="_blank"
-                            class="btn btn-outline-secondary">論文連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>功能介紹</h4>
-                        <p>為碩士論文之AR工具，本工具主要提供雕刻、修補與上色等基礎建模功能；此外，使用者可於3D空間或平面上以線條(Line
-                            Renderer)進行繪製，亦能切換至粒子(Particle)筆刷進行動態效果的創作。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>為了在畢業前的有限時間內完成開發，過程中大量使用AI輔助程式撰寫，以提升開發效率。儘管該工具在程式架構、儲存系統等設計仍有改進空間，但最終順利趕在畢業之際完成開發並得以口試，同時感謝我的指導教授與口試委員。
-                        </p>
-                        <hr>
-                        <h4>產品特色</h4>
-                        <li>簡單易用、直覺操作</li>
-                        <li>DTO紀錄模型狀態</li>
-                        <hr>
-                        <h4>第三方套件</h4>
-                        <li>Unity Simple File Browser(by yasirkula)</li>
-                        <li>Unity Native Gallery(by yasirkula)</li>
-                        <li>Flexible Color Picker(by Ward Dehairs)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <hr>
+                    <div class="project-content p-2">
+                        <div id="dynamicModalProductNameSection">
+                            <h4 class="fw-bold">產品名稱</h4>
+                            <p id="dynamicModalProductName" class="mb-4" style="text-align: justify;"></p>
+                            <hr>
+                        </div>
 
-    <!-- Modal 3 -->
-    <div class="modal fade" id="projectModal3" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">AR衛生教育 (2024/12~2025/05)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel3" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel3" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel3" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel3" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel3" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                        <div id="dynamicModalCreationBackgroundSection">
+                            <h4 class="fw-bold">創作背景</h4>
+                            <div id="dynamicModalCreationBackground" class="creation-background-content mb-4"></div>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/AR_HE_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_HE_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_HE_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_HE_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel3"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel3"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://youtu.be/jKjdNjArOqI?si=CmOFXXYXQ5cOmEwT" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>功能介紹</h4>
-                        <p>開發於Android與iOS的AR醫療教育應用程式。
-                            運用3D立體視覺化呈現心導管與乳癌的相關知識與構造，將醫療專業資訊轉化為易於理解的內容。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>開發過程中，印象比較深的是影片來源的取得。
-                            最一開始是打算從Youtube上抓影片下來，但由於技術問題無法做到直接在unity顯示，所以改從Google雲端抓影片。
-                            從Google雲端雖然可行，但影片撥放不流暢，最終還是連同影片打包進程式。
-                        </p>
-                        <hr>
-                        <h4>產品特色</h4>
-                        <li>AR Foundation平面檢測(Plane Detection)</li>
-                        <li>透過Google Apps Script串接Google Sheets，計入乳癌QA各個單元的點擊次數</li>
-                        <li>Timeline 3D動畫</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 4 -->
-    <div class="modal fade" id="projectModal4" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">AR創作平台 (2023/11~)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel4" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel4" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel4" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel4" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                        <div id="dynamicModalCreationToolsSection">
+                            <h4 class="fw-bold">創作工具</h4>
+                            <ul id="dynamicModalCreationTools" class="project-content mb-4"></ul>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/AR_Platform_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Platform_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/AR_Platform_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel4"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel4"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://youtu.be/s4wV1jTPUqE?si=m4a4mpO3LfypFIow" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>功能介紹</h4>
-                        <p>使用Niantic VPS進行定位，完成定位後可進行AR創作，創作內容將永久保存。
-                            創作工具主要提供畫3D線、留言、上傳圖片、聲音、3D模型，同時可對創作物件進行色彩與座標上的編輯。
-                        </p>
-                        <p>後端(PC)AR內容創作：<br>
-                            1.分策展人、藝術家、觀眾三種權限<br>
-                            2.可劃定不同創作區域<br>
-                            3.不同區域可賦予不同創作工具
-                        </p>
-                        <p>前端(Android、iOS)AR內容創作：<br>
-                            1.可依策展人、藝術家、觀眾三種權限登入<br>
-                            2.不同區域有不同權限的創作工具
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>這項專案對我而言學到不少，不管是AR的技術應用還是功能開發，都花了相當的時間去了解與磨練。
-                            從最初利用Google Apps Script串接Google
-                            Sheets作為資料庫，到後期導入Firebase進行後端整合，這段技術遷移與優化的過程，也讓我感受到與專案共同成長的踏實感。
-                        </p>
-                        <hr>
-                        <h4>產品特色</h4>
-                        <li>AssetBundles動態載入模型</li>
-                        <li>JSON存取Firebase資料</li>
-                        <li>由多個定位地圖組成一個大地圖，提高AR定位速度</li>
-                        <hr>
-                        <h4>第三方套件</h4>
-                        <li>Niantic Spatial SDK</li>
-                        <li>Firebase</li>
-                        <li>Runtime Transform Handle(by pshtif)</li>
-                        <li>Unity Simple File Browser(by yasirkula)</li>
-                        <li>Flexible Color Picker(by Ward Dehairs)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 5 -->
-    <div class="modal fade" id="projectModal5" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">You Shall Not Pass (2023/07)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel5" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel5" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel5" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel5" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel5" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                        <div id="dynamicModalPriceRevenueSection">
+                            <h4 class="fw-bold">售價&收入</h4>
+                            <div id="dynamicModalPriceRevenue" class="price-revenue-content mb-4"></div>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/PC_GameJam2_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_GameJam2_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_GameJam2_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_GameJam2_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel5"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel5"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://github.com/peazzz/2023GameJam_TeamC" target="_blank"
-                            class="btn btn-outline-dark">GitHub連結</a>
-                        <a href="https://youtu.be/NWuz8SooNpE" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>故事背景</h4>
-                        <p>此為Game Jam作品，發想到完成共計3天。<br>
-                            遊戲題目供有三點，分別是：<br>
-                            1.操作只能用一顆按鈕<br>
-                            2.中世紀歐洲的美術風格<br>
-                            3.至少精雕一個3D動畫
-                        </p>
-                        <hr>
-                        <h4>遊戲玩法</h4>
-                        <p>透過點擊空白鍵，形成相對應顏色的盾牌阻止敵人攻擊。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>與Leave Me Alone同樣只有三天的開發時間，但此次更耗費我的精力去處理遊戲內容。
-                            除了基本的遊戲運作外，為了豐富遊戲與滿足企劃的需求，也處理了不少Animation以及效果(村民回饋、教學角色)。
-                        </p>
-                        <hr>
-                        <h4>遊戲特色</h4>
-                        <li>2D與3D結合的遊戲體驗</li>
-                        <li>OneButton遊戲操作</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 6 -->
-    <div class="modal fade" id="projectModal6" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">Leave Me Alone (2023/07)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel6" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel6" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel6" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel6" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                        <div id="dynamicModalFunctionIntroSection">
+                            <h4 class="fw-bold">功能介紹</h4>
+                            <div id="dynamicModalFunctionIntro" class="function-intro-content mb-4"></div>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/PC_GameJam1_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_GameJam1_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_GameJam1_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel6"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel6"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://github.com/peazzz/2023GameJam_TeamD" target="_blank"
-                            class="btn btn-outline-dark">GitHub連結</a>
-                        <a href="https://youtu.be/DgXuJA7vNWY" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>故事背景</h4>
-                        <p>此為Game Jam作品，發想到完成共計3天。<br>
-                            遊戲題目以「再一次」、「恢復」、「繼承」與「繼續」這四個題目中選擇展開。
-                            最終遊戲以「被中斷，但我們會一直再開」作為主題進行開發。
-                        </p>
-                        <hr>
-                        <h4>遊戲玩法</h4>
-                        <p>玩家需交替敲擊鍵盤A、D鍵累積進度，過程中會有多樣化的隨機干擾事件，玩家必須同時利用滑鼠進行排除。
-                            進度達成後，將結算並顯示本次的通關總耗時。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>這是我第一次參加Game Jam，也是目前為止讓我最有成就感且滿意的作品。
-                            同時感謝當時的組員以及組長，得以在短短的三天內完成高品質的小遊戲。
-                        </p>
-                        <hr>
-                        <h4>遊戲特色</h4>
-                        <li>2D與3D結合的遊戲體驗</li>
-                        <li>以計時器與switch語法觸發多樣化事件</li>
-                        <li>場景畫面效果(Post-Processing)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 7 -->
-    <div class="modal fade" id="projectModal7" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">毛毛與BUBU (2023/07~2023/10)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel7" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel7" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel7" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel7" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel7" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                        <div id="dynamicModalVideoAssetsSection">
+                            <h4 class="fw-bold">影片素材</h4>
+                            <ul id="dynamicModalVideoAssets" class="project-content mb-4"></ul>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/PC_Butterfly_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Butterfly_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Butterfly_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Butterfly_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel7"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel7"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://youtu.be/6ciWyIw7j7g?si=88gQnp5SYtk8iEzx" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>故事背景</h4>
-                        <p>今天在外面玩耍的毛毛發現了一個還未孵化的卵，便打算把他帶回家飼養，回到家發現家裡變的怪怪的，然後發現了一個奇怪的盒子...。
-                        </p>
-                        <hr>
-                        <h4>遊戲玩法</h4>
-                        <p>由許多小遊戲組成。以滑鼠點擊與拖曳的方式，進行解謎與探索蝴蝶的相關知識。也可透過「百科全書」閱覽過往獲取的蝴蝶知識。
-                        </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>大學畢業後跟指導教授接的第一項專案，需要在暑假期間完成。也多虧AI逐漸普及，得以協助我完成這項緊急的專案。
-                        </p>
-                        <hr>
-                        <h4>遊戲特色</h4>
-                        <li>PlayerPrefs儲存玩家資料</li>
-                        <li>單例模式資源管理</li>
-                        <li>支援WebGL</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 8 -->
-    <div class="modal fade" id="projectModal8" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">爬塔塔 (2022/03~2023/05)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel8" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel8" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel8" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel8" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projectCarousel8" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                        <div id="dynamicModalMusicAssetsSection">
+                            <h4 class="fw-bold">音樂素材</h4>
+                            <ul id="dynamicModalMusicAssets" class="project-content mb-4"></ul>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/PC_Patata_1.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Patata_2.webp" class="img-fluid rounded mb-3" alt="圖2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Patata_3.webp" class="img-fluid rounded mb-3" alt="圖3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/PC_Patata_4.webp" class="img-fluid rounded mb-3" alt="圖4">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel8"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel8"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="mb-1">
-                        <a href="https://github.com/peazzz/Patata" target="_blank"
-                            class="btn btn-outline-dark">GitHub連結</a>
-                        <a href="https://youtu.be/V-lfkk3TaBk" target="_blank"
-                            class="btn btn-outline-danger">Youtube連結</a>
-                        <a href="https://gnn.gamer.com.tw/detail.php?sn=250463" target="_blank"
-                            class="btn btn-outline-info">巴哈姆特報導</a>
-                    </div>
-                    <ul class="project-content">
-                        <hr>
-                        <h4>故事背景</h4>
-                        <p>傳說神明在創造世界之後留下一顆供應這世界能量的寶珠。
-                            有天怪物出現帶走了這顆寶珠並躲在高塔裡，從此世界缺少了生機。
-                            有人提倡應該爬上塔頂奪寶珠，於是一位名叫「皮茲」的少年站了出來。
-                        </p>
-                        <hr>
-                        <h4>遊戲玩法</h4>
-                        <p>2D平台遊戲，參考遊戲為Celeste，可進行單人或雙人遊玩。</p>
-                        <p>單人模式：採雙角色切換機制。玩家需交互操作主角「皮茲」與助手「QQ」，利用各自的特性進行解謎與闖關。<br>
-                            雙人模式：玩家A使用鍵盤扮演主角「皮茲」的行動，玩家B則以滑鼠控制「QQ」進行協助。雙方透過不同的操作邏輯，根據默契程度展現出"1+1＞2"或"1+1＜2"的效果。 </p>
-                        <hr>
-                        <h4>開發心得</h4>
-                        <p>此為畢業遊戲專題，因個人喜好與過往的遊戲經驗選擇2D平台遊戲作為開發方向。
-                            但在遊戲開發階段的前中期都沒能跳脫出傳統的2D平台遊戲既有的玩法，因此也沒能受到青睞。
-                            好在後期加入強調互助的雙人合作玩法，得以在放視大賞與新一代設計展的展出中受大眾喜愛，甚至收到企業名片與巴哈姆特專訪。
-                        </p>
-                        <hr>
-                        <h4>遊戲特色</h4>
-                        <li>單雙人模式即時切換</li>
-                        <li>遊戲手感(土狼時間、跳躍緩衝、慣性)</li>
-                        <li>主角的披風布料效果(Cloth Component)</li>
-                        <li>場景畫面效果(Post-Processing)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal 9 -->
-    <div class="modal fade" id="projectModal9" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">可愛小狗吉娃娃 (2025/05)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-8 mx-auto text-center">
-                        <img src="img/video/2D_Avatar1.gif" class="img-fluid rounded mb-3 d-block mx-auto" alt="專案動圖">
-                    </div>
-                    <ul class="project-content">
-                        <h4>產品名稱</h4>
-                        <p>Cute little dog Chihuahua</p>
-                        <hr>
-                        <h4>創作背景</h4>
-                        <p>2025年4月時，Nexon宣布開放全球服MapleStory Worlds，當時全臺陷入了懷舊版楓之谷的風潮(Artale)。
-                            受到這股風潮的影響，我也嘗試在MapleStory Worlds中創作屬於自己的2D紙娃娃，花費了約兩個禮拜的時間完成。
-                        </p>
-                        <hr>
-                        <h4>售價&收益</h4>
-                        <p>售價：100W(約台幣15元)。<br>
-                            收入：0.175美金(約台幣5.5元)。</p>
-                        <p>截至2026/05，目前收入超過100美金。</p>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div id="dynamicModalAiVideoSection">
+                            <h4 class="fw-bold">AI影片生成</h4>
+                            <ul id="dynamicModalAiVideo" class="project-content mb-4"></ul>
+                            <hr>
+                        </div>
 
-    <!-- Modal 10 -->
-    <div class="modal fade" id="projectModal10" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">加油站 (2021/05)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="projectCarousel10" class="carousel slide rounded mb-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projectCarousel10" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projectCarousel10" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projectCarousel10" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                        <div id="dynamicModalEditSoftwareSection">
+                            <h4 class="fw-bold">剪輯軟體&轉場效果</h4>
+                            <ul id="dynamicModalEditSoftware" class="project-content mb-4"></ul>
+                            <hr>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/webp/3D_GasStation.webp" class="img-fluid rounded mb-3" alt="圖1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/3D_GasStation_AO.webp" class="img-fluid rounded mb-3" alt="加油站AO圖">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/webp/3D_GasStation_Detail.webp" class="img-fluid rounded mb-3"
-                                    alt="加油站細節圖">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel10"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel10"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <ul class="project-content">
-                        <h4>創作背景</h4>
-                        <p>此為大學課堂作業，主題為建築物。<br>
-                            本作品以《GTA 5》的加油站建築為參考對象，從建模、拆UV到上材質的3D建模實作。
-                        </p>
-                        <hr>
-                        <h4>創作工具</h4>
-                        <li>Maya 2020</li>
-                        <li>Substance</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="projectModal11" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">影片作品集 (2026/05)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mx-auto text-center">
-                        <div class="ratio ratio-16x9 mb-3">
-                            <iframe width="1280" height="720"
-                                src="https://www.youtube.com/embed/EYXsVJSOZk8?si=h1ywCxEAU5663nuj"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div id="dynamicModalBgStoriesSection">
+                            <h4 class="fw-bold">故事背景</h4>
+                            <div id="dynamicModalBgStories" class="mb-4"></div>
+                            <hr>
+                        </div>
+
+                        <div id="dynamicModalGameplaySection">
+                            <h4 class="fw-bold">遊戲玩法</h4>
+                            <div id="dynamicModalGameplay" class="gameplay-content mb-4"></div>
+                            <hr>
+                        </div>
+
+                        <div id="dynamicModalReflectionSection">
+                            <h4 class="fw-bold">開發心得</h4>
+                            <p id="dynamicModalReflection" class="mb-4" style="text-align: justify;"></p>
+                            <hr>
+                        </div>
+
+                        <div id="dynamicModalFeaturesSection">
+                            <h4 class="fw-bold">遊戲特色</h4>
+                            <ul id="dynamicModalFeatures" class="project-content mb-4"></ul>
+                            <hr>
+                        </div>
+
+                        <div id="dynamicModalProductFeaturesSection">
+                            <h4 class="fw-bold">產品特色</h4>
+                            <ul id="dynamicModalProductFeatures" class="project-content mb-4"></ul>
+                            <hr>
+                        </div>
+
+                        <div id="dynamicModalPluginsSection">
+                            <h4 class="fw-bold">第三方套件</h4>
+                            <ul id="dynamicModalPlugins" class="project-content mb-4"></ul>
+                            <hr>
                         </div>
                     </div>
-                    <ul class="project-content">
-                        <h4>影片素材</h4>          
-                        <li>爬塔塔</li>
-                        <li>Leave Me Alone</li>
-                        <li>You Shall Not Pass</li>
-                        <li>毛毛與BUBU</li>
-                        <li>AR創作平台</li>
-                        <li>AR雕刻工具</li>
-                        <li>MR互動繪本</li>
-                        <hr>
-                        <h4>音樂素材</h4>
-                        <li>Gaiety in the Golden Age - Aaron Kenny</li>
-                        <hr>
-                        <h4>AI影片生成</h4>
-                        <li>Google Vids</li>
-                        <hr>
-                        <h4>剪輯軟體&轉場效果</h4>
-                        <li>Unity(Text、Particle)</li>
-                        <li>Premiere Pro 2019</li>
-                    </ul>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>

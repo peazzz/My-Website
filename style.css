@@ -4,20 +4,20 @@
     height: 250px;
     object-fit: cover;
     border: 5px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hero-section { 
+.hero-section {
     /* 讓背景圖片覆蓋整個區域並置中 */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/webp/Back_Chihuahua.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     /* 設定內距，確保文字不會貼齊邊緣，也可以增加高度 */
     padding-top: 60px;
     padding-bottom: 40px;
-    
+
     /* 如果背景太暗或太亮，可以設定文字顏色 */
     color: white;
 }
@@ -27,26 +27,31 @@
     position: absolute;
     bottom: 12px;
     right: 12px;
-    display: flex;     /* 讓裡面的標籤橫向排列 */
-    gap: 5px;          /* 標籤之間的間距 */
+    display: flex;
+    /* 讓裡面的標籤橫向排列 */
+    gap: 5px;
+    /* 標籤之間的間距 */
     pointer-events: none;
 }
 
 /* 個別標籤的樣式 */
 .badge-item {
-    background-color: #6c757d; /* 灰色背景 */
+    background-color: #6c757d;
+    /* 灰色背景 */
     color: white;
     padding: 2px 8px;
     font-size: 0.7rem;
     border-radius: 4px;
     font-weight: bold;
-    text-transform: uppercase; /* 自動轉大寫，看起來更專業 */
+    text-transform: uppercase;
+    /* 自動轉大寫，看起來更專業 */
 }
 
 /* 讓篩選時有一點淡入效果 */
 .portfolio-item {
     transition: all 0.3s ease-in-out;
-    display: block; /* 預設顯示 */
+    display: block;
+    /* 預設顯示 */
 }
 
 /* 調整 Tab Bar 按鈕樣式 (選配) */
@@ -60,16 +65,48 @@
 }
 
 #portfolio-flters .nav-link.active {
-    background-color: #0d6efd; /* Bootstrap Primary Blue */
+    background-color: #0d6efd;
+    /* Bootstrap Primary Blue */
     color: white;
     border-color: #0d6efd;
+}
+
+/* 輪播區域外殼：給一個深色背景，這樣直式圖片兩邊留白時比較好看 */
+#dynamicCarousel {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 強制外殼永遠保持 16:9 比例 */
+    max-height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dynamicCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 確保 1920x1080 圖片完整縮放，絕不切邊 */
+}
+
+/* 輪播圖片自訂樣式 */
+.custom-carousel-img {
+    max-height: 500px;
+    /* 限制最大高度，你可以根據喜好調整 (例如 450px 或 500px) */
+    width: auto;
+    /* 寬度自動按比例縮放 */
+    height: auto;
+    /* 高度自動按比例縮放 */
+    object-fit: contain;
+    /* 💡 核心：保持完整比例縮放，絕不裁切畫面 */
 }
 
 /* 作品集卡片 */
 .card {
     position: relative;
     cursor: pointer;
-    overflow: hidden; /* 確保遮罩不會超出圓角 */
+    overflow: hidden;
+    /* 確保遮罩不會超出圓角 */
     transition: transform 0.3s ease;
 }
 
@@ -80,13 +117,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(61, 137, 252, 0.6); /* Bootstrap 藍色的半透明版 */
+    background-color: rgba(61, 137, 252, 0.6);
+    /* Bootstrap 藍色的半透明版 */
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* 預設隱藏 */
+    opacity: 0;
+    /* 預設隱藏 */
     transition: opacity 0.3s ease;
-    z-index: 1; /* 確保在圖片和文字上方 */
+    z-index: 1;
+    /* 確保在圖片和文字上方 */
 }
 
 /* 建立中央的 + 符號 */
@@ -99,9 +139,11 @@
     font-size: 5rem;
     color: white;
     font-weight: bold;
-    opacity: 0; /* 預設隱藏 */
+    opacity: 0;
+    /* 預設隱藏 */
     transition: opacity 0.3s ease;
-    z-index: 2; /* 確保在藍色背景上方 */
+    z-index: 2;
+    /* 確保在藍色背景上方 */
 }
 
 /* 當滑鼠懸停 (hover) 時，顯示背景與符號 */
@@ -111,7 +153,8 @@
 }
 
 .card:hover {
-    transform: translateY(-5px); /* 懸停時卡片稍微往上飄 */
+    transform: translateY(-5px);
+    /* 懸停時卡片稍微往上飄 */
 }
 
 .card-img-top {
@@ -125,7 +168,7 @@
     line-height: 1.6;
 }
 
-.modal-body h4{
+.modal-body h4 {
     font-weight: bold;
 }
 
@@ -133,43 +176,114 @@
 .modal-body li,
 .modal-body ul {
     padding: 0 10px;
-    margin-left: auto;   /* 居中對齊 */
-    margin-right: auto;  /* 居中對齊 */
-    text-align: justify; /* 保持你之前要的左右對齊[cite: 2] */
+    margin-left: auto;
+    /* 居中對齊 */
+    margin-right: auto;
+    /* 居中對齊 */
+    text-align: justify;
+    /* 保持你之前要的左右對齊[cite: 2] */
 }
 
-/* --- 自動展開描述區 (核心邏輯) --- */
-
-.description-wrapper {
-    position: relative;
+.modal-body {
+    padding-bottom: 0.25rem;
 }
 
-/* 提示文字漸層遮罩 */
-.description-wrapper::after {
-    content: "...查看更多";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 1.6em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
-    display: none;
-    justify-content: flex-end;
-    align-items: center;
-    color: #0d6efd;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: opacity 0.3s ease;
+#dynamicModalLinksSection + hr {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.project-content > div:last-child hr {
+    margin-top: 0.25rem;
+    margin-bottom: 0.1rem;
+}
+
+.modal-footer {
+    padding-top: 0.1rem;
 }
 
 /* --- 專案技術清單 --- */
 .project-content {
-    list-style: none; padding-left: 0; margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
 }
+
 .project-content li {
-    position: relative; padding-left: 1.2rem;
-    line-height: 1.4; margin-bottom: 5px;
+    position: relative;
+    padding-left: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 5px;
 }
+
 .project-content li::before {
-    content: "•"; position: absolute; left: 0; color: #0d6efd; font-weight: bold;
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* 功能介紹內的列表不顯示符號 */
+.function-intro-content ul {
+    list-style: none;
+}
+
+.function-intro-content ul li {
+    position: relative;
+    padding-left: 0 !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.function-intro-content ul li::before {
+    content: "" !important;
+}
+
+/* 遊戲玩法內的列表不顯示符號 */
+.gameplay-content ul {
+    list-style: none;
+}
+
+.gameplay-content ul li {
+    position: relative;
+    padding-left: 0 !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.gameplay-content ul li::before {
+    content: "" !important;
+}
+
+/* 售價&收入內的列表不顯示符號 */
+.price-revenue-content ul {
+    list-style: none;
+}
+
+.price-revenue-content ul li {
+    position: relative;
+    padding-left: 0 !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.price-revenue-content ul li::before {
+    content: "" !important;
+}
+
+/* 創作背景內的列表不顯示符號 */
+.creation-background-content ul {
+    list-style: none;
+}
+
+.creation-background-content ul li {
+    position: relative;
+    padding-left: 0 !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.creation-background-content ul li::before {
+    content: "" !important;
 }
