@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalPriceRevenue = document.getElementById('dynamicModalPriceRevenue');
     const modalFunctionIntro = document.getElementById('dynamicModalFunctionIntro');
     const modalProductFeatures = document.getElementById('dynamicModalProductFeatures');
+    const modalResponsible = document.getElementById('dynamicModalResponsible');
     const modalVideoAssets = document.getElementById('dynamicModalVideoAssets');
     const modalMusicAssets = document.getElementById('dynamicModalMusicAssets');
     const modalAiVideo = document.getElementById('dynamicModalAiVideo');
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalPriceRevenueSection = document.getElementById('dynamicModalPriceRevenueSection');
     const modalFunctionIntroSection = document.getElementById('dynamicModalFunctionIntroSection');
     const modalProductFeaturesSection = document.getElementById('dynamicModalProductFeaturesSection');
+    const modalResponsibleSection = document.getElementById('dynamicModalResponsibleSection');
     const modalVideoAssetsSection = document.getElementById('dynamicModalVideoAssetsSection');
     const modalMusicAssetsSection = document.getElementById('dynamicModalMusicAssetsSection');
     const modalAiVideoSection = document.getElementById('dynamicModalAiVideoSection');
@@ -350,6 +352,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (modalProductFeaturesSection) {
                     modalProductFeaturesSection.style.display = project.productFeatures ? "" : "none";
                 }
+                if (modalResponsibleSection) {
+                    modalResponsibleSection.style.display = project.responsible ? "" : "none";
+                }
                 if (modalVideoAssetsSection) {
                     modalVideoAssetsSection.style.display = project.videoAssets ? "" : "none";
                 }
@@ -390,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
 
-                // 5. 動態渲染列表項目【產品特色、創作工具、影片素材等】
+                // 5. 動態渲染列表項目【產品特色、負責項目、創作工具、影片素材等】
                 if (modalProductFeatures && modalProductFeaturesSection) {
                     modalProductFeatures.innerHTML = "";
                     if (project.productFeatures && project.productFeatures.length > 0) {
@@ -402,6 +407,20 @@ document.addEventListener('DOMContentLoaded', function () {
                         });
                     } else {
                         modalProductFeaturesSection.style.display = "none";
+                    }
+                }
+
+                if (modalResponsible && modalResponsibleSection) {
+                    modalResponsible.innerHTML = "";
+                    if (project.responsible && project.responsible.length > 0) {
+                        modalResponsibleSection.style.display = "";
+                        project.responsible.forEach(item => {
+                            const li = document.createElement('li');
+                            li.textContent = item;
+                            modalResponsible.appendChild(li);
+                        });
+                    } else {
+                        modalResponsibleSection.style.display = "none";
                     }
                 }
 

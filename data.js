@@ -1,5 +1,5 @@
 // 可新增的資料欄位：
-// carouselImages:[] 輪播圖片
+// carouselImages: 輪播圖片
 // youtubeLink: Youtube連結
 // githubLink: GitHub連結
 // bahamuteLink: 巴哈姆特報導
@@ -7,7 +7,7 @@
 // title: 專案標題
 // productName: 產品名稱
 
-// story:[] 故事背景
+// story: 故事背景
 // gameplay: 遊戲玩法
 // reflection: 開發心得
 // creationBackground: 創作背景
@@ -20,9 +20,10 @@
 // aiVideo: AI 影片生成
 // editSoftware: 剪輯軟體 & 轉場效果
 
-// productFeatures:[] 產品特色
-// features:[] 遊戲特色
-// plugins:[] 第三方套件或外部套件列表
+// productFeatures: 產品特色
+// features: 遊戲特色
+// plugins: 第三方套件或外部套件列表
+// responsible: 負責項目
 
 // technologies: 使用技術
 const projectsData = {
@@ -48,8 +49,13 @@ const projectsData = {
             "Google Vids"
         ],
         editSoftware: [
-            "Unity(Text、Particle)",
+            "Unity",
             "Premiere Pro 2019"
+        ],
+        responsible: [
+            "素材錄製(含Google Vids)",
+            "轉場效果(Unity、Premiere Pro)",
+            "影片剪輯(Premiere Pro)"
         ]
     },
     "project2": {
@@ -90,6 +96,13 @@ const projectsData = {
         plugins: [
             "Meta XR All-in-One SDK",
             "socket.io-client-csharp(by doghappy)"
+        ],
+        responsible: [
+            "程式撰寫(影片展示內容)",
+            "水面特效(Shader)",
+            "路線提示(Particle)",
+            "串接Socket.IO",
+            "Addressables資源管理"
         ]
     },
     "project3": {
@@ -114,9 +127,17 @@ const projectsData = {
             "DTO紀錄模型狀態"
         ],
         plugins: [
+            "AR Foundation",
+            "Niantic Spatial SDK",
             "Unity Simple File Browser(by yasirkula)",
             "Unity Native Gallery(by yasirkula)",
-            "Flexible Color Picker(by Ward Dehairs)"
+            "Flexible Color Picker(by Ward Dehairs)",
+            "AR-Drawing(by Rathod)"
+        ],
+        responsible: [
+            "程式撰寫",
+            "論文撰寫",
+            "UI編排"
         ]
     },
     "project4": {
@@ -137,6 +158,10 @@ const projectsData = {
             "AR Foundation平面檢測(Plane Detection)",
             "透過Google Apps Script串接Google Sheets，計入乳癌QA各個單元的點擊次數",
             "Timeline 3D動畫"
+        ],
+        responsible: [
+            "程式撰寫",
+            "Google Sheets串接"
         ]
     },
     "project5": {
@@ -179,6 +204,13 @@ const projectsData = {
             "Runtime Transform Handle(by pshtif)",
             "Unity Simple File Browser(by yasirkula)",
             "Flexible Color Picker(by Ward Dehairs)"
+        ],
+        responsible: [
+            "程式撰寫",
+            "定位地圖建立",
+            "資源AssetBundle化",
+            "Firebase串接",
+            "技術報告撰寫"
         ]
     },
     "project6": {
@@ -206,10 +238,15 @@ const projectsData = {
         gameplay:
             "透過點擊空白鍵，形成相對應顏色的盾牌阻止敵人攻擊。",
         reflection:
-            "開發過程中，印象比較深的是影片來源的取得。 最一開始是打算從Youtube上抓影片下來，但由於技術問題無法做到直接在unity顯示，所以改從Google雲端抓影片。 從Google雲端雖然可行，但影片撥放不流暢，最終還是連同影片打包進程式。",
+            "與Leave Me Alone同樣只有三天的開發時間，但此次更耗費我的精力去處理遊戲內容。除了基本的遊戲運作外，為了豐富遊戲與滿足企劃的需求，也處理了不少Animation以及效果(村民回饋、教學角色)。",
         features: [
             "2D與3D結合的遊戲體驗",
             "OneButton遊戲操作"
+        ],
+        responsible: [
+            "程式撰寫(除結尾)",
+            "燈光效果(Light)",
+            "轉場運鏡(Animation)"
         ]
     },
     "project7": {
@@ -234,6 +271,10 @@ const projectsData = {
             "2D與3D結合的遊戲體驗",
             "以計時器與switch語法觸發多樣化事件",
             "場景畫面效果(Post-Processing)"
+        ],
+        responsible: [
+            "程式撰寫",
+            "漏電特效(Particle System)"
         ]
     },
     "project8": {
@@ -257,6 +298,11 @@ const projectsData = {
             "PlayerPrefs儲存玩家資料",
             "單例模式資源管理",
             "支援WebGL"
+        ],
+        responsible: [
+            "程式撰寫",
+            "首頁粉塵特效(Particle System)",
+            "轉場運鏡(Animation)"
         ]
     },
     "project9": {
@@ -296,6 +342,15 @@ const projectsData = {
             "遊戲手感(土狼時間、跳躍緩衝、慣性)",
             "主角的披風布料效果(Cloth Component)",
             "場景畫面效果(Post-Processing)"
+        ],
+        responsible: [
+            "程式撰寫",
+            "衝刺、沙塵特效(Line Renderer、Particle System)",
+            "披風布料效果(Cloth)",
+            "轉場運鏡(Animation)",
+            "燈光效果(Light)",
+            "後處理(Post Processing)",
+            "Tilemap關卡設計"
         ]
     },
     "project10": {
@@ -322,6 +377,11 @@ const projectsData = {
                 ]
             },
             "截至2026/05，目前收入超過100美金。"
+        ],
+        responsible: [
+            "動作設計",
+            "繪畫",
+            "上架"
         ]
     },
     "project11": {
@@ -339,6 +399,11 @@ const projectsData = {
         creationTools: [
             "Maya 2020",
             "Substance"
+        ],
+        responsible: [
+            "建模",
+            "拆UV",
+            "上材質"
         ]
     }
 };
