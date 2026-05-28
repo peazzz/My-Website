@@ -64,7 +64,7 @@ const projectsData = {
         youtubeLink: "https://youtu.be/1KlCKZ9EN9c", //Youtube 連結
 
         carouselImages: [
-            "img/webp/MR_Book_1.webp",
+            "img/webp/MR_Book_7.webp",
             "img/webp/MR_Book_2.webp",
             "img/webp/MR_Book_3.webp",
             "img/webp/MR_Book_4.webp",
@@ -90,9 +90,9 @@ const projectsData = {
         reflection:
             "算是我花最久時間在處理的專案，該專案主要分兩次進行開發，第一次是我還在碩一的時候，當時開發項目為《阿婆的時光寶盒》和《Guji Guji》，第二次是我剛碩士畢業，開發項目為《小威的眼睛》。不巧，剛碩士畢業的我很快就當兵了，導致開發的時間極度壓縮，每次放假幾乎沒有休息的時間，都在處理該專案，幸好有學弟願意幫忙開發，否則在結案前無法完成。 這兩次專案即使結案後，依然會根據遊玩體驗持續修正內容與Bug，為呈現最好的作品。",
         features: [
-            "Socket.IO實作即時通訊架構，達成雙機同端同步互動",
-            "使用Addressables資源管理系統，優化記憶體配置",
-            "設計手勢與圖像辨識，降低操作門檻"
+            "遊戲時間排行榜",
+            "Socket.IO即時通訊架構",
+            "Addressables資源管理"
         ],
         plugins: [
             "Meta XR All-in-One SDK",
