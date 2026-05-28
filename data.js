@@ -4,6 +4,7 @@
 // githubLink: GitHub連結
 // bahamuteLink: 巴哈姆特報導
 // paperLink: 論文連結
+// demoLink: Demo連結
 // title: 專案標題
 // productName: 產品名稱
 
@@ -217,6 +218,7 @@ const projectsData = {
         title: "You Shall Not Pass (2023/07)",
         youtubeUrl: "https://youtu.be/NWuz8SooNpE?si=sTmgHhPM0N4hYuXk",
         githubLink: "https://github.com/peazzz/2023GameJam_TeamC",
+        demoLink: "https://drive.google.com/file/d/1BvikY_TZghz5lwAPB3hNjYd7lfV72zJ2/view?usp=sharing",
 
         carouselImages: [
             "img/webp/PC_GameJam2_1.webp",
@@ -253,6 +255,7 @@ const projectsData = {
         title: "Leave Me Alone (2023/07)",
         youtubeUrl: "https://youtu.be/DgXuJA7vNWY?si=O2PpRqe1b9-uB7wM",
         githubLink: "https://github.com/peazzz/2023GameJam_TeamD",
+        demoLink: "https://drive.google.com/file/d/1I9yFjIsp41_DafCXP6zNcIAKHyqCErlp/view?usp=sharing",
 
         carouselImages: [
             "img/webp/PC_GameJam1_1.webp",
@@ -310,6 +313,7 @@ const projectsData = {
         youtubeUrl: "https://youtu.be/V-lfkk3TaBk?si=AGYILCGcRaOAwrb0",
         githubLink: "https://github.com/peazzz/Patata",
         bahamuteLink: "https://gnn.gamer.com.tw/detail.php?sn=250463",
+        demoLink: "https://drive.google.com/file/d/1939KK1t5ZUftFtGM7aOnmmW4Bc-k1TZM/view?usp=sharing",
 
         carouselImages: [
             "img/webp/PC_Patata_1.webp",

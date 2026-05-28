@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalGithubBtn = document.getElementById('dynamicModalGithubBtn');
     const modalBahamuteBtn = document.getElementById('dynamicModalBahamuteBtn');
     const modalPaperBtn = document.getElementById('dynamicModalPaperBtn');
+    const modalDemoBtn = document.getElementById('dynamicModalDemoBtn');
     const modalLinksSection = document.getElementById('dynamicModalLinksSection');
     const modalProductName = document.getElementById('dynamicModalProductName');
     const modalCreationBackground = document.getElementById('dynamicModalCreationBackground');
@@ -102,6 +103,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         modalPaperBtn.style.display = "inline-block";
                     } else {
                         modalPaperBtn.style.display = "none";
+                    }
+                }
+
+                if (modalDemoBtn) {
+                    if (project.demoLink) {
+                        modalDemoBtn.href = project.demoLink;
+                        modalDemoBtn.style.display = "inline-block";
+                    } else {
+                        modalDemoBtn.style.display = "none";
                     }
                 }
 
