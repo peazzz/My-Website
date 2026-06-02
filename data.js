@@ -32,7 +32,7 @@ const projectsData = {
         title: "影片作品集 (2026/05)",
 
         carouselImages: [
-            { type: 'youtube', url: 'https://www.youtube.com/embed/EYXsVJSOZk8?si=ypkovLJm-cIaeNJM' },
+            { type: 'youtube', url: 'https://www.youtube.com/embed/6ZbDIYD5Fok?si=2sd0_8NMMGPeeZ1k' },
         ],
         videoAssets:[
             "爬塔塔",
@@ -64,6 +64,7 @@ const projectsData = {
         youtubeLink: "https://youtu.be/1KlCKZ9EN9c", //Youtube 連結
 
         carouselImages: [
+            { type: 'youtube', url: 'https://www.youtube.com/embed/k8N_UQj3-hc?si=owuCYnLMkVTunFn2' },
             "img/webp/MR_Book_7.webp",
             "img/webp/MR_Book_2.webp",
             "img/webp/MR_Book_3.webp",
@@ -221,6 +222,7 @@ const projectsData = {
         demoLink: "https://drive.google.com/file/d/1BvikY_TZghz5lwAPB3hNjYd7lfV72zJ2/view?usp=sharing",
 
         carouselImages: [
+            { type: 'youtube', url: 'https://www.youtube.com/embed/1ge_M4AWrP8?si=VwH0mcMiG_0E5s5v' },
             "img/webp/PC_GameJam2_1.webp",
             "img/webp/PC_GameJam2_2.webp",
             "img/webp/PC_GameJam2_3.webp",
@@ -258,6 +260,7 @@ const projectsData = {
         demoLink: "https://drive.google.com/file/d/1I9yFjIsp41_DafCXP6zNcIAKHyqCErlp/view?usp=sharing",
 
         carouselImages: [
+            { type: 'youtube', url: 'https://www.youtube.com/embed/bD5o_c8_2Cs?si=fRwHF_RO1VlMtVFg' },
             "img/webp/PC_GameJam1_1.webp",
             "img/webp/PC_GameJam1_2.webp",
             "img/webp/PC_GameJam1_3.webp"
@@ -285,6 +288,7 @@ const projectsData = {
         youtubeUrl: "https://youtu.be/6ciWyIw7j7g?si=hxPdeB7_j3m9-U7L",
 
         carouselImages: [
+            { type: 'youtube', url: 'https://www.youtube.com/embed/I730fo6ZYBo?si=3SvAjTrQygHFow-x' },
             "img/webp/PC_Butterfly_1.webp",
             "img/webp/PC_Butterfly_2.webp",
             "img/webp/PC_Butterfly_3.webp",
@@ -316,6 +320,8 @@ const projectsData = {
         demoLink: "https://drive.google.com/file/d/1939KK1t5ZUftFtGM7aOnmmW4Bc-k1TZM/view?usp=sharing",
 
         carouselImages: [
+            { type: 'youtube', url: 'https://www.youtube.com/embed/uEbDJcYXV0s?si=CBaEhROs5_NrP5FK' },
+            { type: 'youtube', url: 'https://www.youtube.com/embed/X8O4Su0kCoE?si=pImOpTHkcR79_mBf' },
             "img/webp/PC_Patata_1.webp",
             "img/webp/PC_Patata_2.webp",
             "img/webp/PC_Patata_3.webp",
@@ -361,7 +367,7 @@ const projectsData = {
         title: "可愛小狗吉娃娃 (2025/05)",
 
         carouselImages: [
-            "img/video/2D_Avatar1.gif"
+            "img/gif/2D_Avatar1.gif"
         ],
         productName:
             "Cute little dog Chihuahua",

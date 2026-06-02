@@ -40,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalPluginsSection = document.getElementById('dynamicModalPluginsSection');
     const carouselInner = document.getElementById('dynamicCarouselInner');
     const indicatorsContainer = document.getElementById('dynamicCarouselIndicators');
+    const dynamicCarouselEl = document.getElementById('dynamicCarousel');
+    let dynamicCarouselInstance = null;
+
+    if (dynamicCarouselEl) {
+        dynamicCarouselEl.addEventListener('slid.bs.carousel', function (event) {
+            const activeItem = event.relatedTarget;
+            if (!dynamicCarouselInstance || !activeItem) return;
+            if (activeItem.dataset.carouselType === 'youtube') {
+                dynamicCarouselInstance.pause();
+            } else {
+                dynamicCarouselInstance.cycle();
+            }
+        });
+    }
 
     // 監聽所有具備點擊觸發 Modal 的卡片
     const portfolioCards = document.querySelectorAll('.portfolio-card-click');
@@ -554,6 +568,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 iframe.style.aspectRatio = '16 / 9';
                                 iframe.setAttribute('allowFullscreen', '');
                                 iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                                carouselItem.dataset.carouselType = 'youtube';
                                 carouselItem.appendChild(iframe);
                             } else {
                                 // 圖片或 GIF
@@ -572,6 +587,36 @@ document.addEventListener('DOMContentLoaded', function () {
                         indicatorsContainer.style.display = "none";
                         carouselControls.forEach(control => control.style.display = "none");
                     }
+
+                    if (dynamicCarouselEl) {
+                        if (dynamicCarouselInstance) {
+                            dynamicCarouselInstance.dispose();
+                            dynamicCarouselInstance = null;
+                        }
+
+                        if (project.carouselImages && project.carouselImages.length > 0) {
+                            const allYoutubeSlides = project.carouselImages.every(
+                                item => typeof item === 'object' && item.type === 'youtube'
+                            );
+
+                            dynamicCarouselInstance = new bootstrap.Carousel(dynamicCarouselEl, {
+                                interval: allYoutubeSlides ? false : 5000,
+                                ride: false,
+                                pause: 'hover',
+                                wrap: true,
+                                touch: true
+                            });
+
+                            if (!allYoutubeSlides) {
+                                const activeItem = carouselInner.querySelector('.carousel-item.active');
+                                if (activeItem && activeItem.dataset.carouselType === 'youtube') {
+                                    dynamicCarouselInstance.pause();
+                                } else {
+                                    dynamicCarouselInstance.cycle();
+                                }
+                            }
+                        }
+                    }
                 }
             }
         });
@@ -583,6 +628,16 @@ document.addEventListener('DOMContentLoaded', function () {
         universalModalEl.addEventListener('hidden.bs.modal', function () {
             if (modalYoutubeBtn) {
                 modalYoutubeBtn.href = "";
+            }
+            // 關閉時清空輪播內容，確保 iframe 停止播放並釋放記憶體
+            if (carouselInner) carouselInner.innerHTML = "";
+            if (indicatorsContainer) indicatorsContainer.innerHTML = "";
+            
+            // 關閉 modal 時停止輪播，下一次打開時重新建立實例
+            if (dynamicCarouselInstance) {
+                dynamicCarouselInstance.pause();
+                dynamicCarouselInstance.dispose();
+                dynamicCarouselInstance = null;
             }
         });
     }
